@@ -4,11 +4,15 @@ body {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
   overflow-x: hidden;
+  font-family: 'omorigame2';
+  font-size: 32px;
+  background-color: #000000;
 }
 
 span {
     z-index: 10;
     background-color: #00000000;
+    color: #ffffff;
     /* backdrop-filter: blur(8px); */
     /* -webkit-backdrop-filter: blur(8px); */
     /* top and bottom | left and right */
@@ -22,21 +26,29 @@ span {
   }
 
 h1, h2, p, span {
+    color: whitesmoke;
     text-shadow: 3px 6px 5px rgb(21, 21, 21);
+    text-align: center;
+}
+
+.preview {
+  background-image: url('src/sample1.jpg');
+  padding: 200px;
 }
 
 nav {  
-  /* margin-top: 200px; */
+  margin-top: 200px;
+  background-color: rgba(33, 32, 32, 0.692);
   /* text-align: center; */
   /* position: fixed; */
   /* transform: translate(-50%, -50%); */
-  display: inline-block;
-  list-style: none;
-  justify-content: space-around;
-  align-items: center;
+  /* display: inline-block; */
+  /* list-style: none; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
   /* margin-bottom:25px; */
-  z-index: 999999;
-  filter: drop-shadow(20px 20px 4px #10101146);
+  /* z-index: 999999; */
+  /* filter: drop-shadow(20px 20px 4px #10101146); */
 }
 
 nav ul {
@@ -51,17 +63,37 @@ nav ul {
   
   nav ul li {
     /* background-color: var(--secondary-color); */
-    float: left;
-    /* border: 4px solid #ffffff; */
-    /* box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.5); */
-    /* text-transform: uppercase; */
-    display: flex;
-    /* color: var(--primary-color); */
+    /* float: left; */
+    margin: 25px;
+    display: inline-block;
     font-weight: 200;
-    transition: all 0.1s linear;
+     /* transitions for hover effect */
+     transition: all 0.5s ease-in-out 0s;
+     transition-timing-function: cubic-bezier(0,1.07,.51,.95);
   }
   
   nav ul li:hover {
     /* background-color: var(--dark-color); */
     color: #fff;
+   
   }
+
+  @font-face {
+    font-family: 'omorigame';
+    src: url('https://enemiphobia.github.io/toblegang/fonts/omori_game-webfont.woff2') format('woff2'),
+         url('https://enemiphobia.github.io/toblegang/fonts/omori_game-webfont.woff') format('woff'),
+         url('https://enemiphobia.github.io/toblegang/fonts/OMORI_GAME.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'omorigame2';
+    src: url('https://enemiphobia.github.io/toblegang/fonts/omori_game2-webfont.woff2') format('woff2'),
+         url('https://enemiphobia.github.io/toblegang/fonts/omori_game2-webfont.woff') format('woff'),
+         url('https://enemiphobia.github.io/toblegang/fonts/OMORI_GAME2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
